@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useRef, RefObject } from 'react'
 import HomeSection from '@/components/HomeSection'
+import { motion } from 'framer-motion'
 
 const MainPage = () => {
   const pageRefs: RefObject<HTMLDivElement>[] = [
@@ -33,13 +34,13 @@ const MainPage = () => {
   }
 
   return (
-    <div style={{ display: 'flex', height: '100vh', overflowY: 'scroll' }}>
+    <div className="flex h-full overflow-x-hidden">
       <div style={{ flex: '1', scrollSnapType: 'y mandatory' }}>
         <div ref={pageRefs[0]}>
           <HomeSection
             description="Pagina 1"
             title="Component 1"
-            background="white"
+            background="bg-gradient-to-r from-cyan-500 to-blue-500"
             buttonLink="/"
           />
         </div>
@@ -47,7 +48,7 @@ const MainPage = () => {
           <HomeSection
             description="Pagina 2"
             title="Component 2"
-            background="black"
+            background="bg-gradient-to-r from-violet-500 to-fuchsia-500"
             buttonLink="/"
           />
         </div>
@@ -55,24 +56,33 @@ const MainPage = () => {
           <HomeSection
             description="Pagina 3"
             title="Component 3"
-            background="blue-500"
+            background="bg-gradient-to-r from-purple-500 to-pink-500"
             buttonLink="/"
           />
         </div>
       </div>
-      <div className="absolute top-1/3 w-16 h-44 flex flex-col justify-around items-center">
-        <button
+      <div className="fixed top-1/3 w-16 h-44 flex flex-col justify-around items-center">
+        <motion.button
+          initial={{ x: '-100vh' }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.6 }}
           onClick={() => handleManualScroll(0)}
-          className="w-2 h-2 bg-white rounded-full"
-        ></button>
-        <button
+          className="w-3 h-3 bg-white rounded-full"
+        ></motion.button>
+        <motion.button
+          initial={{ x: '-100vh' }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.7 }}
           onClick={() => handleManualScroll(1)}
-          className="w-2 h-2 bg-white rounded-full"
-        ></button>
-        <button
+          className="w-3 h-3 bg-white rounded-full"
+        ></motion.button>
+        <motion.button
+          initial={{ x: '-100vh' }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.9 }}
           onClick={() => handleManualScroll(2)}
-          className="w-2 h-2 bg-white rounded-full"
-        ></button>
+          className="w-3 h-3 bg-white rounded-full"
+        ></motion.button>
       </div>
     </div>
   )

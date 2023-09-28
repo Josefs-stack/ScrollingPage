@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 interface HomeSectionProps {
@@ -16,24 +15,37 @@ const HomeSection: React.FC<HomeSectionProps> = ({
   buttonLink,
 }) => {
   return (
-    <section className="w-full h-screen overflow-x-hidden bg-black flex flex-col justify-center items-center">
-      <motion.div
-        className={`absolute w-full h-screen top-0 z-0 bg-${background}`}
-      ></motion.div>
+    <section
+      className={`w-full h-screen overflow-x-hidden flex flex-col justify-center items-center ${background}`}
+    >
+      <div className="absolute w-full h-screen top-0 z-0"></div>
       <div className="w-5/6 h-44 flex flex-col justify-center items-center z-10">
-        <h3 className="mb-4 text-white text-sm tracking-[1em] text-center	uppercase">
+        <motion.h3
+          initial={{ rotateX: 90 }}
+          animate={{ rotateX: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mb-4 text-white text-sm tracking-[1em] text-center	uppercase"
+        >
           {description}
-        </h3>
-        <h1 className="text-white font-extralight text-8xl text-center uppercase">
+        </motion.h3>
+        <motion.h1
+          initial={{ rotateX: 90 }}
+          animate={{ rotateX: 0 }}
+          transition={{ delay: 0.4 }}
+          className="text-white font-extralight text-8xl text-center uppercase"
+        >
           {title}
-        </h1>
+        </motion.h1>
       </div>
-      <Link
+      <motion.a
+        initial={{ rotateX: 90 }}
+        animate={{ rotateX: 0 }}
+        transition={{ delay: 0.6 }}
         href={buttonLink}
         className="mt-8 w-64 h-12 bg-white rounded-full flex justify-center text-sm font-bold items-center z-10 uppercase"
       >
         discovery now
-      </Link>
+      </motion.a>
     </section>
   )
 }
