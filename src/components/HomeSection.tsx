@@ -18,7 +18,6 @@ const HomeSection: React.FC<HomeSectionProps> = ({
     <section
       className={`w-full h-screen overflow-x-hidden flex flex-col justify-center items-center ${background}`}
     >
-      <div className="absolute w-full h-screen top-0 z-0"></div>
       <div className="w-5/6 h-44 flex flex-col justify-center items-center z-10">
         <motion.h3
           initial={{ rotateX: 90 }}
@@ -32,7 +31,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({
           initial={{ rotateX: 90 }}
           animate={{ rotateX: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-white font-extralight text-8xl text-center uppercase"
+          className="text-white font-extralight text-8xl text-center uppercase md:text-4xl"
         >
           {title}
         </motion.h1>

@@ -34,7 +34,7 @@ const MainPage = () => {
   }
 
   return (
-    <div className="flex h-full overflow-x-hidden">
+    <div className="flex min-w-full h-full overflow-hidden scroll-smooth">
       <div style={{ flex: '1', scrollSnapType: 'y mandatory' }}>
         <div ref={pageRefs[0]}>
           <HomeSection
