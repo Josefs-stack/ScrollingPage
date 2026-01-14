@@ -16,7 +16,7 @@ const RedesSociais = () => {
           initial={{ rotateY: 90 }}
           animate={{ rotateY: 360 }}
           transition={{ delay: 1.5 }}
-          href="https://github.com/OliveiraDevs"
+          href="https://github.com/Josefs-stack"
           target="_blank"
           rel="noopener noreferrer"
           className="w-10 h-10 rounded-full border border-white flex items-center justify-center bg-white"
@@ -38,7 +38,7 @@ const RedesSociais = () => {
           initial={{ rotateY: 90 }}
           animate={{ rotateY: 360 }}
           transition={{ delay: 2.1 }}
-          href="https://wa.me/5521980903910"
+          href="https://wa.me/5521971246822"
           target="_blank"
           rel="noopener noreferrer"
           className="w-10 h-10 rounded-full border border-white flex items-center justify-center bg-white"
